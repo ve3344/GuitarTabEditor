@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sub"
+    android:orientation="vertical">
+
+    <View
+        android:layout_gravity="top"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/main"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            app:contentInsetStart="0dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/main"
+            android:windowNoTitle="true"
+            >
+
+            <ImageView
+                android:id="@+id/main_menu_toggle_on"
+                android:src="@drawable/menu_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/abc_action_bar_overflow_padding_start_material"
+                style="@style/Widget.AppCompat.ActionButton"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/main_title"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:translationZ="2dp"
+                android:layout_weight="1.0"
+                android:layout_margin="2dp"
+                android:background="@drawable/rounded_rect_back">
+
+                <com.ve.view.editor.TabEditor
+                    android:id="@+id/TabEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+
+                <com.ve.view.keypicker.KeyPicker
+                    android:layout_height="72dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/NumberKeyPicker"/>
+                <com.ve.view.keypicker.KeyPicker
+                    android:layout_height="72dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:id="@+id/ChordKeyPicker"/>
+
+            </FrameLayout>
+
+            <com.ve.view.keypicker.KeyPicker
+                android:layout_height="36dp"
+                android:layout_width="match_parent"
+                android:id="@+id/NoteKeyPicker"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
+

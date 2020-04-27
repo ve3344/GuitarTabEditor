@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	>
+    <dimen 
+		name="abc_control_corner_material" 
+		app:override="true">12dp</dimen>
+</resources>
+
